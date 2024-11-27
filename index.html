@@ -1,33 +1,150 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Simple Website</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            background-color: #f0f0f0;
-            color: #333;
-        }
-        h1 {
-            color: #007bff;
-        }
-        footer {
-            margin-top: 20px;
-            background-color: #333;
-            color: white;
-            padding: 10px;
-        }
-    </style>
+<title>JTMK</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+.w3-row-padding img {margin-bottom: 12px}
+/* Set the width of the sidebar to 120px */
+.w3-sidebar {width: 120px;background: #222;}
+/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+#main {margin-left: 120px}
+/* Remove margins from "page content" on small screens */
+@media only screen and (max-width: 600px) {#main {margin-left: 0}}
+</style>
 </head>
-<body>
-    <h1>Welcome to My Website</h1>
-    <p>This is a simple website hosted on GitHub Pages.</p>
+<body class="w3-black">
 
-    <footer>
-        <p>&copy; 2024 My Name</p>
-    </footer>
+<!-- Icon Bar (Sidebar - hidden on small screens) -->
+<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
+  <a href="#home" class="w3-bar-item w3-button w3-padding-large w3-black">
+    <i class="fa fa-home w3-xxlarge"></i>
+    <p>HOME</p>
+  </a>
+  <a href="#register" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-user w3-xxlarge"></i>
+    <p>REGISTER</p>
+  </a>
+  <a href="#photos" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-eye w3-xxlarge"></i>
+    <p>PHOTOS</p>
+  </a>
+  <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-envelope w3-xxlarge"></i>
+    <p>CONTACT</p>
+  </a>
+</nav>
+
+<!-- Navbar on small screens (Hidden on medium and large screens) -->
+<div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
+  <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
+    <a href="#home" class="w3-bar-item w3-button" style="width:25% !important">HOME</a>
+    <a href="#register" class="w3-bar-item w3-button" style="width:25% !important">REGISTER</a>
+    <a href="#photos" class="w3-bar-item w3-button" style="width:25% !important">PHOTOS</a>
+    <a href="#contact" class="w3-bar-item w3-button" style="width:25% !important">CONTACT</a>
+  </div>
+</div>
+
+<!-- Page Content -->
+<div class="w3-padding-large" id="main">
+  <!-- Header/Home -->
+  <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
+    <h1 class="w3-jumbo"><span class="w3-hide-small">JABATAN TEKNOLOGI MAKLUMAT & KOMUNIKASI</span></h1>
+  </header>
+
+<!-- Header -->
+<header class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="home">
+  <img class="w3-image" src="images/banner.png" width="1500" height="800">
+  <div class="w3-display-middle w3-margin-top w3-center">
+    <h1 class="w3-xxlarge w3-text-white"><span class="w3-padding w3-black w3-opacity-min"><b>JTMK</b></span> <span class="w3-hide-small w3-text-light-grey">PSIS</span></h1>
+  </div></header>
+
+  <!-- Register Section -->
+  <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="home">
+    <h2 class="w3-text-light-grey">About</h2>
+    <hr style="width:200px" class="w3-opacity">
+    Jabatan Teknologi Maklumat & Komunikasi (JTMK) offers diploma programs in the following areas: Diploma in Information Technology (Digital Technology).</p>
+    <p>Software and Application Development track is detailed study of engineering to the design, development and maintanance of software and application. This track provides comprehensive training for the students to ensure that the application built consistently, correctly, on time and on budget and within requirements. The demand of software and application development also emerged to cater to the immense rate of change in user requirements and environment  on which application is supposed to be working. It also will expose the students how to develop software and application using leading industry development platforms and tools. Students will study core units in programming and project management will be trained by active industry professionals and be given the option to design a software and application that can commercialise and meet industrial specifications. </p>
+    
+  <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="register">
+    <p><b>REGISTER AS STUDENT JABATAN TEKNOLOGI MAKLUMAT & KOMUNIKASI</b></p>
+
+      <form action = "engine_insert.php" method = "get">
+      <p><b>NAME :</b></p>
+      <input class="w3-input w3-border" type="text" placeholder="Name" name="name" required>
+      <p><b>MATRIX NO :</b></p>
+      <input class="w3-input w3-section w3-border" type="text" placeholder="Matrix No" name="matrix_no" required>
+      <p><b>IC NO :</b></p>
+      <input class="w3-input w3-section w3-border" type="text" placeholder="IC No" name="ic_no" required>
+      <p><b>POLITEKNIK :</b></p>
+      <input class="w3-input w3-section w3-border" type="text" placeholder="Politeknik" name="politeknik" required>
+      <p><b>DEPARTMENT :</b></p>
+      <input class="w3-input w3-section w3-border" type="text" placeholder="Department" name="department" required>
+      <p><b>CLASS :</b></p>
+      <input class="w3-input w3-section w3-border" type="text" placeholder="Class" name="class" required>
+      <p><b>DATE OF BIRTH :</b></p>
+      <input class="w3-input w3-section w3-border" type="text" placeholder="Date of Birth" name="dob" required>
+      <p><b>ADDRESS :</b></p>
+      <input class="w3-input w3-section w3-border" type="text" placeholder="Address" name="address" required>
+      <p><b>POSCODE :</b></p>
+      <input class="w3-input w3-section w3-border" type="text" placeholder="Poscode" name="poscode" required>
+      <p><b>STATE :</b></p>
+      <input class="w3-input w3-section w3-border" type="text" placeholder="State" name="state" required>
+      
+      <br><br><center><button class="w3-button w3-white w3-section" type="submit">
+        <i class="fa fa-paper-plane"></i> REGISTER </button>
+      </center>
+    </form>
+  </div>
+  
+  <!-- Portfolio Section -->
+  <div class="w3-padding-64 w3-content" id="photos">
+    <h2 class="w3-text-light-grey">Photos</h2>
+    <hr style="width:200px" class="w3-opacity">
+
+    <!-- Grid for photos -->
+    <div class="w3-row-padding" style="margin:0 -16px">
+      <div class="w3-half">
+        <img src="images/logojtmk.png" style="width:100%">
+      </div>
+
+    <!-- End photo grid -->
+    </div>
+  <!-- End Portfolio Section -->
+  </div>
+
+  <!-- Contact Section -->
+  <div class="w3-padding-64 w3-content w3-text-grey" id="contact">
+    <h2 class="w3-text-light-grey">Contact</h2>
+    <hr style="width:200px" class="w3-opacity">
+
+    <div class="w3-section">
+      <p><i class="fa fa-map-marker fa-fw w3-text-white w3-xxlarge w3-margin-right"></i>Politeknik Sultan Idris Shah, Sabak Bernam</p>
+      <p><i class="fa fa-phone fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Phone: +60182811291</p>
+      <p><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"> </i> Email: syazaadlinashari@gmail.com</p>
+    </div>
+  <!-- End Contact Section -->
+  </div>
+  
+    <!-- Footer -->
+  <footer class="w3-content w3-padding-64 w3-text-grey w3-xlarge">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+    <p>17DDT21F1018 SYAZA ADLINA BINTI SHARI</a></p>
+  <!-- End footer -->
+  </footer>
+
+<!-- END PAGE CONTENT -->
+</div>
+
 </body>
 </html>
